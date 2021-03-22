@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Стартовая - все посты
+{% endblock %}
+
+{% block content %}
+    <a href="/auth/">Форма регистрации</a>
+    <h1>Все посты</h1>
+    {% for post in posts %}
+    <p>
+        {{ post.title }} - {{ post.pub_date }}
+        {# This is a comment #}
+    </p>
+    <p>{{ post.text }}</p>
+    {% endfor %}
+{% endblock %}
